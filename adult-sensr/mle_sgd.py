@@ -45,3 +45,6 @@ def proximal_gd_sigmoid(X, Y, mbs, maxiter=1e2):
             print('Done with iteration %d' % m)
             
     return Sigma_now
+
+
+    ## SOmething
