@@ -466,7 +466,7 @@ def forward_fair_clp(tf_X, tf_y, tf_fair_X, tf_counter_X, weights=None, n_units 
     return variables, l_pred, l_pred_fair, (cross_entropy, cross_entropy_vector), cross_entropy_fair, accuracy, l_pred_counter
 
 COUNTER_INIT = 0.1
-TB_BASE = './tensorboard_adult/'
+TB_BASE = 'C:/Users/maity/OneDrive/Documents/adult-sensr/adult-sensr/tensorboard_adult/'
 
 def train_fair_nn(X_train, y_train, tf_prefix='', X_test=None, X_test_counter=None, y_test=None, 
                   weights=None, n_units = None, balance_batch=True, lr=0.001, batch_size=100, epoch=100, 
@@ -572,11 +572,11 @@ def train_fair_nn(X_train, y_train, tf_prefix='', X_test=None, X_test_counter=No
                         'clp:' + str(lambda_clp), 'start:' + str(fair_start),
                         'c_init:' + str(counter_init)]) + '_' + 'arch:' + ','.join(list(map(str,n_units)))
     
-    tb_base_dir = TB_BASE + tf_prefix + '_' + tb_long
+    tb_base_dir = TB_BASE + tf_prefix + '_' + tb_long 
     if seed is None:
         folder_exists = True
         post_idx = 0
-        tb_dir = tb_base_dir + '_' + str(post_idx)
+        tb_dir = tb_base_dir + '_' + str(post_idx) 
         while folder_exists:
             if os.path.exists(tb_dir):
                 post_idx += 1

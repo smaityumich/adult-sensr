@@ -17,8 +17,8 @@ def get_adult_data():
     '''
 
     headers = ['age', 'workclass', 'fnlwgt', 'education', 'education-num', 'marital-stataus', 'occupation', 'relationship', 'race', 'sex', 'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'y']
-    train = pd.read_csv('adult.data', header = None)
-    test = pd.read_csv('adult.test', header = None)
+    train = pd.read_csv('C:/Users/maity/OneDrive/Documents/adult-sensr/adult-sensr/adult.data', header = None)
+    test = pd.read_csv('C:/Users/maity/OneDrive/Documents/adult-sensr/adult-sensr/adult.test', header = None)
     df = pd.concat([train, test], ignore_index=True)
     df.columns = headers
 

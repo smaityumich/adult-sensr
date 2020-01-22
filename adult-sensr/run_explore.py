@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(1, 'C:/Users/maity/OneDrive/Documents/adult-sensr/adult-sensr/')
+
+
 import tensorflow as tf
 import numpy as np
 from adult import preprocess_adult_data, get_sensitive_directions_and_projection_matrix, get_consistency, get_metrics
